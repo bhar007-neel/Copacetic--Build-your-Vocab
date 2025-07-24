@@ -30,7 +30,7 @@ function App() {
 
   function handleCreateAccount() {
     if (!name) { return }
-    localStorage.setItem('username', name)  // local storage databse storage
+    localStorage.setItem('username', name)  // local storage databse
     handleChangePage(1)
   }
 
@@ -78,7 +78,7 @@ function App() {
     if (localStorage.getItem('day')) {
       const { day: d, datetime: dt } = JSON.parse(localStorage.getItem('day'))
       setDatetime(dt)
-      setDay(d)
+      setDay(d)    
 
       if (d > 1 && dt) {
         const diff = countdownIn24Hours(dt)
